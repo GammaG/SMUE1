@@ -26,6 +26,8 @@ public class HelloSematicWeb {
 		hsw.populateFOAFFriends();
 		System.out.println("Say Hello to Myself");
 		hsw.mySelf(hsw.friends);
+		System.out.println("Say Hello to my FOAF Friends");
+		hsw.myFriends(hsw.friends);
 	}
 
 	private void populateFOAFFriends() throws IOException {
@@ -75,4 +77,12 @@ public class HelloSematicWeb {
 		}
 
 	}
+
+	private void myFriends(Model model) {
+		// Hello to just my friends - navigation
+		runQuery(" select DISTINCT ?myname ?name where{"
+				+ "swp2:me foaf:knows ?friend." + "?friend foaf:name ?name } ",
+				model);
+	}
+
 }
