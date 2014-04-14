@@ -28,6 +28,7 @@ public class HelloSematicWeb {
 		hsw.mySelf(hsw.friends);
 		System.out.println("Say Hello to my FOAF Friends");
 		hsw.myFriends(hsw.friends);
+
 	}
 
 	private void populateFOAFFriends() throws IOException {
