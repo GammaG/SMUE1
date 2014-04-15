@@ -17,7 +17,9 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/admin/ontologies/2014/3/untitled-ontology-3"/>
+    <owl:Ontology rdf:about="http://semwebprogramming.org/2009/ont/chp2:#">
+        <owl:versionIRI rdf:resource="http://semwebprogramming.org/2009/ont/chp2:#"/>
+    </owl:Ontology>
     
 
 
@@ -86,7 +88,8 @@
     <!-- http://www.semanticweb.org/admin/ontologies/2014/3/untitled-ontology-3#Indi_5 -->
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-3;Indi_5">
-        <hasName>Merkel aka. Angi</hasName>
+        <rdf:type rdf:resource="&untitled-ontology-3;Individual"/>
+        <hasName>Sem Web</hasName>
         <hasFriend rdf:resource="&untitled-ontology-3;Indi_6"/>
         <hasFriend rdf:resource="&untitled-ontology-3;Indi_7"/>
     </owl:NamedIndividual>
@@ -96,6 +99,7 @@
     <!-- http://www.semanticweb.org/admin/ontologies/2014/3/untitled-ontology-3#Indi_6 -->
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-3;Indi_6">
+        <rdf:type rdf:resource="&untitled-ontology-3;Individual"/>
         <hasName>Adenauer</hasName>
         <hasFriend rdf:resource="&untitled-ontology-3;Indi_5"/>
         <hasFriend rdf:resource="&untitled-ontology-3;Indi_7"/>
@@ -106,6 +110,7 @@
     <!-- http://www.semanticweb.org/admin/ontologies/2014/3/untitled-ontology-3#Indi_7 -->
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-3;Indi_7">
+        <rdf:type rdf:resource="&untitled-ontology-3;Individual"/>
         <hasName>Putin</hasName>
         <hasFriend rdf:resource="&untitled-ontology-3;Indi_5"/>
         <hasFriend rdf:resource="&untitled-ontology-3;Indi_6"/>
