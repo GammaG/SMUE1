@@ -19,11 +19,17 @@ public class HelloSematicWeb {
 	private static String defaultNameSpace = "http://semwebprogramming.org/2009/ont/chp2:#";
 
 	private Model friends = null;
+	private Model schema = null;
 
 	public static void main(String[] args) throws IOException {
 		HelloSematicWeb hsw = new HelloSematicWeb();
 		System.out.println("Load my FOAF Friends");
 		hsw.populateFOAFFriends();
+		System.out.println("Add new Friends");
+		hsw.populateNewFriends();
+		System.out.println("Add the new Ontologies");
+		hsw.populateFOAFSchema();
+		hsw.populateNewFriendsSchema();
 		System.out.println("Say Hello to Myself");
 		hsw.mySelf(hsw.friends);
 		System.out.println("Say Hello to my FOAF Friends");
@@ -84,6 +90,26 @@ public class HelloSematicWeb {
 		runQuery(" select DISTINCT ?myname ?name where{"
 				+ "swp2:me foaf:knows ?friend." + "?friend foaf:name ?name } ",
 				model);
+	}
+
+	private void populateNewFriends() throws IOException {
+		InputStream inFoafInstance = FileManager.get().open(
+				"rdf/Individuals.owl");
+		friends.read(inFoafInstance, defaultNameSpace);
+		inFoafInstance.close();
+	}
+
+	private void populateFOAFSchema() {
+		schema = ModelFactory.createOntologyModel();
+		schema.read("rdf/index.rdf");
+		friends.read("rdf/index.rdf");
+	}
+
+	private void populateNewFriendsSchema() throws IOException {
+		InputStream inFoafInstance = FileManager.get().open(
+				"rdf/IndividualsOntologies.owl");
+		friends.read(inFoafInstance, defaultNameSpace);
+		inFoafInstance.close();
 	}
 
 }

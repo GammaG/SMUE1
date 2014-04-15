@@ -10,7 +10,7 @@
 	<classpathentry kind="lib" path="lib/jena-arq-2.11.1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jena-arq-2.11.1.jar"/>
 	<classpathentry kind="lib" path="lib/jena-core-2.11.1-sources.jar"/>
-	<classpathentry kind="lib" path="lib/jena-core-2.11.1.jar"/>
+	<classpathentry kind="lib" path="lib/jena-core-2.11.1.jar" sourcepath="C:/Users/Admin/.m2/repository/org/apache/jena/jena-core/2.11.1/jena-core-2.11.1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jena-iri-1.0.1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jena-iri-1.0.1.jar"/>
 	<classpathentry kind="lib" path="lib/jena-sdb-1.4.1-sources.jar"/>
